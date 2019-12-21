@@ -34,22 +34,28 @@ def guessWhat(FullName):
     Result =[]
     xingshi =[]
     mingzi =[]
+    mingzi2 =[]
+    #姓氏 last_name
     for l_line_row in list_ln:
         if FullName[0]== l_line_row['pinyin'] :
             xingshi.append(l_line_row['last_name'])
     print(xingshi)
+    #名字第一个字firstname
     for l_line_row in list_fn:
         if FullName[1]== l_line_row['pinyin'] :
             mingzi.append(l_line_row['first_name'])
     print(mingzi)
+    #名字第二个字second name
     for l_line_row in list_fn:
-        if FullName[1]== l_line_row['pinyin'] :
-            mingzi.append(l_line_row['first_name'])
+        if FullName[2]== l_line_row['pinyin'] :
+            mingzi2.append(l_line_row['first_name'])
     print(mingzi)
     for last in xingshi:
         for first in mingzi:
-            print(last+first)
+            for second in mingzi2:
+            # print(last+'宏'+second)
+                print(last + first + second)
 # data = get_pinyin_first_alpha(first_name)
-guessWhat('jhj')
+guessWhat('lyf')
 # print(data)
 # print(data)

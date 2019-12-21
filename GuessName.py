@@ -18,7 +18,7 @@ for (i, l_name,py_name) in zip(range(100,0,-1),list_last_name,list_last_pinyin):
     dict_last_name['pinyin'] = py_name
     dict_last_name['qz'] = i
     list_ln.append(dict_last_name)
-print(list_ln)
+# print(list_ln)
 # common girl first name
 for (qz_py, l_name_first,py_name_first) in zip(range(1,len(first_name)),list_first_name,list_first_pinyin):
     dict_first_name ={}
@@ -26,14 +26,30 @@ for (qz_py, l_name_first,py_name_first) in zip(range(1,len(first_name)),list_fir
     dict_first_name['pinyin'] = py_name_first
     dict_first_name['qz'] = qz_py
     list_fn.append(dict_first_name)
-print(list_fn)
+# print(list_fn)
 def get_pinyin_first_alpha(name):
     return "".join([i[0] for i in pinyin.get(name, " ").split(" ")])
 
 def guessWhat(FullName):
-    for FullName[0] in list_ln['pinyin']:
-        list_ln['last_name']
-
-data = get_pinyin_first_alpha(first_name)
+    Result =[]
+    xingshi =[]
+    mingzi =[]
+    for l_line_row in list_ln:
+        if FullName[0]== l_line_row['pinyin'] :
+            xingshi.append(l_line_row['last_name'])
+    print(xingshi)
+    for l_line_row in list_fn:
+        if FullName[1]== l_line_row['pinyin'] :
+            mingzi.append(l_line_row['first_name'])
+    print(mingzi)
+    for l_line_row in list_fn:
+        if FullName[1]== l_line_row['pinyin'] :
+            mingzi.append(l_line_row['first_name'])
+    print(mingzi)
+    for last in xingshi:
+        for first in mingzi:
+            print(last+first)
+# data = get_pinyin_first_alpha(first_name)
+guessWhat('jhj')
 # print(data)
 # print(data)

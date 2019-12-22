@@ -4,6 +4,7 @@ last_name =u"王李张刘杨陈赵黄周吴徐郑马朱胡郭何高林罗孙梁�
 last_pinyin =u"wlzlyczhzwxzmzhghgllslxstxhdcpcxtdpyyjcydycswldrsyljcztlwfjsljxwffbzmxqqjyxydlhlstlhgmhgswqythdmkxt"
 first_name =u"筠柔竹霭凝晓欢霄枫芸菲寒伊亚宜可姬舒影荔枝思丽秀娟英华慧巧美娜静淑惠珠翠雅芝玉萍红娥玲芬芳燕彩春菊勤珍贞莉兰凤洁梅琳素云莲真环雪荣爱妹霞香月莺媛艳瑞凡佳嘉琼桂娣叶璧璐娅琦晶妍茜秋珊莎锦黛青倩婷姣婉娴瑾颖露瑶怡婵雁蓓纨仪荷丹蓉眉君琴蕊薇菁梦岚苑婕馨瑗琰韵融园艺咏卿聪澜纯毓悦昭冰爽琬茗羽希宁欣飘育滢馥"
 first_pinyin ="yrzanxhxfyfhyyykjsylzslxjyhhqmnjshzcyzyphelffyccjqzzllfjmlsylzhxràmxxyyyyrfjjqgdyblyqjyqqssjdqqtjwxjylyycybwyhdrmjqrwjmlyjxyyyryyyqclcyyzbswmyxnxpyyf"
+# 添加男孩子常用名字版本
 list_ln =[]
 list_fn =[]
 list_last_name = list(last_name)
@@ -56,6 +57,7 @@ def guessWhat(FullName):
             # print(last+'宏'+second)
                 print(last + first + second)
 # data = get_pinyin_first_alpha(first_name)
+# guessWhat('lyf')
 guessWhat('lyf')
 # print(data)
 # print(data)

@@ -37,27 +37,35 @@ def guessWhat(FullName):
     mingzi =[]
     mingzi2 =[]
     #姓氏 last_name
-    for l_line_row in list_ln:
-        if FullName[0]== l_line_row['pinyin'] :
-            xingshi.append(l_line_row['last_name'])
-    print(xingshi)
+    if len(FullName[0])>= 1 :
+        for l_line_row in list_ln:
+            if FullName[0]== l_line_row['pinyin'] :
+                xingshi.append(l_line_row['last_name'])
+                # print(xingshi)
     #名字第一个字firstname
-    for l_line_row in list_fn:
-        if FullName[1]== l_line_row['pinyin'] :
-            mingzi.append(l_line_row['first_name'])
-    print(mingzi)
+    if len(FullName)>=2:
+        for l_line_row in list_fn:
+            if FullName[1]== l_line_row['pinyin'] :
+                mingzi.append(l_line_row['first_name'])
+        # print(mingzi)
     #名字第二个字second name
-    for l_line_row in list_fn:
-        if FullName[2]== l_line_row['pinyin'] :
-            mingzi2.append(l_line_row['first_name'])
-    print(mingzi)
+    if len(FullName)>=3:
+        for l_line_row in list_fn:
+            if FullName[2]== l_line_row['pinyin'] :
+                mingzi2.append(l_line_row['first_name'])
+        # print(mingzi)
     for last in xingshi:
-        for first in mingzi:
-            for second in mingzi2:
-            # print(last+'宏'+second)
-                print(last + first + second)
+        if mingzi :
+            for first in mingzi:
+                if mingzi2 :
+                    for second in mingzi2:
+                    # print(last+'宏'+second)
+                        print(last + first + second)
+                # 处理姓名两个字的情况
+                else:
+                    print(last + first )
 # data = get_pinyin_first_alpha(first_name)
 # guessWhat('lyf')
-guessWhat('lyf')
+guessWhat('zyy')
 # print(data)
 # print(data)

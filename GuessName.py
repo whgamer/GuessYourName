@@ -5,6 +5,12 @@ def get_pinyin_first_alpha(name):
     return "".join([i[0] for i in pinyin.get(name, " ").split(" ")])
 
 def guessWhat(sex,FullName):
+    list_ln = get_last_name_data(list_last_name, list_last_name_pinyin)
+    if sex=='boy':
+        list_fn= girl_boy_data(name_boy, list_name_boy, list_boy_pinyin)
+    else:
+        list_fn= girl_boy_data(name_girl, list_name_girl, list_girl_pinyin)
+
     Result =[]
     xingshi =[]
     mingzi =[]
@@ -85,6 +91,6 @@ def girl_boy_data(str_name,list_name,list_name_pinyin):
 # data = get_pinyin_first_alpha(first_name)
 # guessWhat('lyf')
 # print(name_boy_pinyin)
-print(guessWhat(sex='boy','yy'))
+print(guessWhat('boy','xxx'))
 # print(data)
 # print(data)

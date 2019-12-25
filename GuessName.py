@@ -88,11 +88,15 @@ def girl_boy_data(str_name,list_name,list_name_pinyin):
 # common girl boy name
 # print(list_fn)
 
-# data = get_pinyin_first_alpha(first_name)
-# guessWhat('lyf')
-# print(name_boy_pinyin)
-result = guessWhat('boy','xxx')
-result.sort()
-print(result)
+def main():
+    abbr = 'xxx'
+    sex = 'girl'
+    result = guessWhat(sex, abbr)
+    result.sort()
+    print('您输入简称是' + abbr + '性别是' + sex + '可能结果' + ':\n', result)
+
+if __name__ == "__main__":
+    main()
+
 # print(data)
 # print(data)

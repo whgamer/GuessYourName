@@ -92,7 +92,7 @@ def main():
     abbr = 'xxx'
     sex = 'girl'
     result = guessWhat(sex, abbr)
-    result.sort()
+    # result.sort()
     print('您输入简称是' + abbr + '性别是' + sex + '可能结果' + ':\n', result)
 
 if __name__ == "__main__":

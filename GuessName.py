@@ -48,10 +48,11 @@ def guessWhat(sex,FullName):
                     result = last + first
                     Name_Guess.append(result)
     return Name_Guess
-last_name =u"王李张刘杨陈赵黄周吴徐郑马朱胡郭何高林罗孙梁谢宋唐许韩邓曹彭曾萧田董潘袁于蒋蔡余杜叶程苏魏吕丁任沈姚卢姜崔钟谭陆汪范金石廖贾夏韦傅方白邹孟熊秦邱江尹薛阎段雷侯龙史陶黎贺顾毛郝龚邵万钱严覃河戴莫孔向汤"
-last_pinyin =u"wlzlyczhzwxzmzhghgllslxstxhdcpcxtdpyyjcydycswldrsyljcztlwfjsljxwffbzmxqqjyxydlhlstlhgmhgswqythdmkxt"
-
+last_name =u"王李张刘杨陈赵黄周吴徐郑马朱胡郭何高林罗孙梁谢宋唐许韩邓曹彭曾萧田董潘袁于蒋蔡余杜叶程苏魏吕丁任沈姚卢姜崔钟谭陆汪范金石廖贾夏韦傅方白邹孟熊秦邱江尹薛阎段雷侯龙史陶黎贺顾毛郝龚邵万钱严覃河戴莫孔向安汤艾"# 添加安艾
+last_pinyin =u"wlzlyczhzwxzmzhghgllslxstxhdcpcxtdpyyjcydycswldrsyljcztlwfjsljxwffbzmxqqjyxydlhlstlhgmhgswqythdmkxata"
+print(len(last_name))
 name_girl =u"筠柔竹霭凝晓欢霄枫芸菲寒伊亚宜可姬舒影荔枝思丽秀娟英华慧巧美娜静淑惠珠翠雅芝玉萍红娥玲芬芳燕彩春菊勤珍贞莉兰凤洁梅琳素云莲真环雪荣爱妹霞香月莺媛艳瑞凡佳嘉琼桂娣叶璧璐娅琦晶妍茜秋珊莎锦黛青倩婷姣婉娴瑾颖露瑶怡婵雁蓓纨仪荷丹蓉眉君琴蕊薇菁梦岚苑婕馨瑗琰韵融园艺咏卿聪澜纯毓悦昭冰爽琬茗羽希宁欣飘育滢馥"
+
 girl_pinyin = get_pinyin_first_alpha(name_girl)
 # 添加男孩子常用名字版本
 name_boy ="泽朗伯昮晋晟诚先敬震振壮会思群豪心邦承乐宏言旲旻昊天达安岩中茂进林有坚和彪博泰盛振挺明永健世广志义兴良海山仁波宁行时志忠思绍功松善厚庆磊"
@@ -68,7 +69,7 @@ list_name_girl = list(name_girl)
 list_girl_pinyin = list(girl_pinyin)
 # the last name in chinese sorted by population desc
 def get_last_name_data(list_last_name,list_last_name_pinyin):
-    for (i, l_name,py_name) in zip(range(100,0,-1),list_last_name,list_last_name_pinyin):
+    for (i, l_name,py_name) in zip(range(len(last_name),0,-1),list_last_name,list_last_name_pinyin):
         dict_last_name ={}
         dict_last_name['last_name']= l_name
         dict_last_name['pinyin'] = py_name
@@ -89,7 +90,7 @@ def girl_boy_data(str_name,list_name,list_name_pinyin):
 # print(list_fn)
 
 def main():
-    abbr = 'xxx'
+    abbr = 'ayk'
     sex = 'girl'
     result = guessWhat(sex, abbr)
     # result.sort()

@@ -90,7 +90,7 @@ def girl_boy_data(str_name,list_name,list_name_pinyin):
 # print(list_fn)
 
 def main():
-    abbr = 'ayk'
+    abbr = 'yzy'
     sex = 'girl'
     result = guessWhat(sex, abbr)
     # result.sort()
